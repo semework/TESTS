@@ -254,6 +254,27 @@ file-saving, etc. parameters in the driver section (i.e. if \_\_name\_\_
 These lines are enclosed in between two double lines. The following
 screenshot shows part of the driver code.
 
+``` 
+  if __name__ == "__main__":
+
+    # when using this code with your own path and data, change the lines between
+    # the double hash lines
+
+    ###########################################################################
+    ############################ start your change here #########################
+    
+#     main_path = r'/opt/notebooks/dnanexus/project/data/NYC_taxi/'
+    main_path = r'/Users/mabebe@dnanexus.com/Documents/python_stuff/EXPERIMENTS/data'
+    PATH_CSV = os.path.join(main_path, 'pandas_df_taxi.csv')
+    PATH_parquet = os.path.join(main_path, 'pandas_df_taxi.parquet')
+
+    # to make it easy to use a different dataset, we choose here which columns to 
+    # use for analysis
+    
+``` 
+
+
+
 #### ![](media/image6.png){width="5.682292213473316in" height="1.5287379702537183in"}
 
 The script's main function (the Modin_vs_Pandas class) is to create a
